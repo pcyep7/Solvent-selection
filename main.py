@@ -31,3 +31,10 @@ getPCA_plot(principalDf, "PCA", "Thioester")
 getPCA_plot(principalDf, "PCA", "Esterification")
 # plot of experimental data
 getPCA_plot(principalDf, "PCA", "Delapine")
+# plot of experimental data
+getPCA_plot(principalDf, "PCA", "Grignard")
+getPCA_plot(principalDf, "PCA", "Amide")
+getPCA_plot(principalDf, "PCA", "C-C Heck")
+getPCA_plot(principalDf, "PCA", "C-C Bayliss")
+getPCA_plot(principalDf, "PCA", "Suzuki-Miyaura")
+getPCA_plot(principalDf, "PCA", "Buchwald-Hartwig")

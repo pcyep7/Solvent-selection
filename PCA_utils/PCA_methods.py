@@ -37,7 +37,7 @@ def perform_PCA(file, Descriptors, missing_data="mean", scaling="standard"):
     for x in range(len(data_df_impute[0])):
         columns.append("PC" + str(x + 1))
     principalDf = pd.DataFrame(data=principalComponents, columns=columns)
-    # get the cumualtive variance
+    # get the cumulative variance
     cum_scree=np.cumsum(pca.explained_variance_ratio_)*100
     # get the loadings for each PC
     loadings = pd.DataFrame(pca.components_.T, columns=columns, index=Descriptors)
@@ -55,3 +55,9 @@ def add_back_data(principalDf, data):
     principalDf["Delapine"] = data["Delapine"]
     principalDf["Functional Group"] = data["Functional Group"]
     principalDf["CHEM21 Numerical"] = data["CHEM21 Numerical"]
+    principalDf["Grignard"] = data["Grignard"]
+    principalDf["Amide"] = data["Amide"]
+    principalDf["C-C Heck"] = data["C-C Heck"]
+    principalDf["C-C Bayliss"] = data["C-C Bayliss"]
+    principalDf["Suzuki-Miyaura"] = data["Suzuki-Miyaura"]
+    principalDf["Buchwald-Hartwig"] = data["Buchwald-Hartwig"]
