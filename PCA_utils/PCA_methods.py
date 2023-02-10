@@ -63,3 +63,5 @@ def add_back_data(principalDf, data):
     principalDf["Buchwald-Hartwig"] = data["Buchwald-Hartwig"]
     principalDf["Alkene metathesis"] = data["Alkene metathesis"]
     principalDf["Suzuki-Miyaura Ni"] = data["Suzuki-Miyaura Ni"]
+    principalDf["Sn2/SnAr"] = data["Sn2/SnAr"]
+    principalDf["BP /degC"] = data["BP /degC"]
