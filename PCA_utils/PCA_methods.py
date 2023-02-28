@@ -64,4 +64,7 @@ def add_back_data(principalDf, data):
     principalDf["Alkene metathesis"] = data["Alkene metathesis"]
     principalDf["Suzuki-Miyaura Ni"] = data["Suzuki-Miyaura Ni"]
     principalDf["Sn2/SnAr"] = data["Sn2/SnAr"]
+    principalDf["Alcohol oxidation"] = data["Alcohol oxidation"]
+    principalDf["Ester hydrolysis"] = data["Ester hydrolysis"]
     principalDf["BP /degC"] = data["BP /degC"]
+    principalDf["cost £/L"] = data["cost £/L"]

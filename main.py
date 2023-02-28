@@ -1,10 +1,12 @@
 from PCA_utils.PCA_methods import perform_PCA, add_back_data
 from PCA_utils.graphs import get_plain_PCA, scree_graph, loadings_graph, FG_graph, getPCA_plot
-from PCA_utils.Flowchart import flowchart
+from PCA_utils.reactionT import reactionT
+from PCA_utils.budget import budget
 
-Descriptors=["Molecular Weight", "BP /degC", "Density g/cm3", "Viscosity /cP", "Vapour Pressure /mmHg", "Refractive index",
-             "logP", "Dipole moment (D)", "Dielectric constant", "Alpha", "Beta", "Pi", "Dispersion", "Polarity", "H Bonding",
-             "Molar Vol"]
+Descriptors= ["Molecular Weight", "BP /degC", "Density g/cm3", "Viscosity /cP", "Vapour Pressure /mmHg",
+              "Refractive index", "logP", "Dipole moment (D)", "Dielectric constant", "Alpha", "Beta",
+              "Pi", "Dispersion", "Polarity", "H Bonding", "Molar Vol"]
+
 dict_desc = {"one": 1, "two": 2}
 print(dict_desc["one"])
 # PCA, Mean Impute, Standardisation
@@ -14,8 +16,13 @@ data, principalDf, cum_scree, loadings = perform_PCA("solvent_exp_data.csv", Des
 add_back_data(principalDf, data)
 
 # get reaction temp
-T=flowchart()
+T=reactionT()
 principalDf = principalDf[principalDf["BP /degC"] > T]
+
+# get solvent budget
+C=budget()
+principalDf = principalDf[principalDf["cost £/L"] < C]
+
 
 # plot PCA graph
 get_plain_PCA(principalDf)
@@ -46,5 +53,6 @@ getPCA_plot(principalDf, "PCA", "Suzuki-Miyaura Pd")
 getPCA_plot(principalDf, "PCA", "Buchwald-Hartwig")
 getPCA_plot(principalDf, "PCA", "Alkene metathesis")
 getPCA_plot(principalDf, "PCA", "Suzuki-Miyaura Ni")
-getPCA_plot(principalDf, "PCA", "BP /degC")
+getPCA_plot(principalDf, "PCA", "Alcohol oxidation")
 getPCA_plot(principalDf, "PCA", "Sn2/SnAr")
+getPCA_plot(principalDf, "PCA", "Ester hydrolysis")

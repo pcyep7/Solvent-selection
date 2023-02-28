@@ -13,7 +13,7 @@ config = {
 }
 
 def get_plain_PCA(principalDf):
-    fig = px.scatter(principalDf, x="PC1", y="PC2", hover_name="Solvent", hover_data={"PC1":False,"PC2":False}, 
+    fig = px.scatter(principalDf, x="PC1", y="PC2", hover_name="Solvent", hover_data={"PC1":False,"PC2":False},
                      title="PCA First Two PCs")
     fig.update_traces(marker=dict(size=12,
                                   opacity=0.6),
@@ -61,7 +61,7 @@ def loadings_graph(loadings_df):
     fig.show(config=config)
     
 def FG_graph(principalDf):
-    fig = px.scatter(principalDf, x="PC1", y="PC2", color="Functional Group", 
+    fig = px.scatter(principalDf, x="PC1", y="PC2", color="Functional Group",
                      color_discrete_sequence=px.colors.qualitative.G10, hover_name="Solvent", 
                      hover_data={"PC1":False,"PC2":False})
     fig.update_traces(marker=dict(size=12,
@@ -77,7 +77,7 @@ def FG_graph(principalDf):
     
 
 def getPCA_plot(Data,title,colour_by):
-    fig = px.scatter(Data, x='PC1', y='PC2', title=title, hover_name="Solvent", hover_data={"PC1":False,"PC2":False}, 
+    fig = px.scatter(Data, x='PC1', y='PC2', title=title, hover_name="Solvent", hover_data={"PC1":False,"PC2":False},
                      color=colour_by, color_continuous_scale='Bluered_r')
     fig.update_traces(marker=dict(size=12,
                                   opacity=0.6),
