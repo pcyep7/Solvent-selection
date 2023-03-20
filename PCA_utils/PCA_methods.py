@@ -58,7 +58,7 @@ def add_back_data(principalDf, data):
     principalDf["Grignard"] = data["Grignard"]
     principalDf["Amide"] = data["Amide"]
     principalDf["C-C Heck"] = data["C-C Heck"]
-    principalDf["C-C Bayliss"] = data["C-C Bayliss"]
+    principalDf["C-C Baylis"] = data["C-C Baylis"]
     principalDf["Suzuki-Miyaura Pd"] = data["Suzuki-Miyaura Pd"]
     principalDf["Buchwald-Hartwig"] = data["Buchwald-Hartwig"]
     principalDf["Alkene metathesis"] = data["Alkene metathesis"]
