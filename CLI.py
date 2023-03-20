@@ -8,8 +8,42 @@ Descriptors= ["Molecular Weight", "BP /degC", "Density g/cm3", "Viscosity /cP", 
               "Pi", "Dispersion", "Polarity", "H Bonding", "Molar Vol"]
 
 
-dict_desc = {"one": 1, "two": 2}
-print(dict_desc["one"])
+dict_desc = {
+    "Grignard": ["Dipole moment (D)", "Dielectric constant", "Alpha", "Beta",
+              "Pi", "Polarity", "H Bonding"],
+    "Alkene metathesis": ["Alpha", "Beta", "H Bonding", "Dispersion"],
+    "Heck C-C": ["Dipole moment (D)", "Dielectric constant", "Alpha", "Beta",
+              "Pi", "Polarity", "H Bonding"],
+    "Buchwald-Hartwig": ["Dipole moment (D)", "Dielectric constant", "Alpha",
+              "Pi", "Polarity", "H Bonding"],
+    "SN2/SNAr": ["Dipole moment (D)", "Dielectric constant", "Alpha", "Beta",
+              "Pi", "Polarity", "H Bonding"],
+    "Amide Coupling": ["Molecular Weight", "BP /degC", "Density g/cm3", "Viscosity /cP", "Vapour Pressure /mmHg",
+              "Refractive index", "logP", "Dipole moment (D)", "Dielectric constant", "Alpha", "Beta",
+              "Pi", "Dispersion", "Polarity", "H Bonding", "Molar Vol"],
+    "Suzuki-Miyaura": ["Molecular Weight", "BP /degC", "Density g/cm3", "Viscosity /cP", "Vapour Pressure /mmHg",
+              "Refractive index", "logP", "Dipole moment (D)", "Dielectric constant", "Alpha", "Beta",
+              "Pi", "Dispersion", "Polarity", "H Bonding", "Molar Vol"],
+    "Alcohol Oxidation": ["Molecular Weight", "BP /degC", "Density g/cm3", "Viscosity /cP", "Vapour Pressure /mmHg",
+              "Refractive index", "logP", "Dipole moment (D)", "Dielectric constant", "Alpha", "Beta",
+              "Pi", "Dispersion", "Polarity", "H Bonding", "Molar Vol"],
+    "Baylis-Hillman": ["Molecular Weight", "BP /degC", "Density g/cm3", "Viscosity /cP", "Vapour Pressure /mmHg",
+              "Refractive index", "logP", "Dipole moment (D)", "Dielectric constant", "Alpha", "Beta",
+              "Pi", "Dispersion", "Polarity", "H Bonding", "Molar Vol"],
+    "Ester Hydrolysis": ["Molecular Weight", "BP /degC", "Density g/cm3", "Viscosity /cP", "Vapour Pressure /mmHg",
+              "Refractive index", "logP", "Dipole moment (D)", "Dielectric constant", "Alpha", "Beta",
+              "Pi", "Dispersion", "Polarity", "H Bonding", "Molar Vol"],
+    "Other": ["Molecular Weight", "BP /degC", "Density g/cm3", "Viscosity /cP", "Vapour Pressure /mmHg",
+              "Refractive index", "logP", "Dipole moment (D)", "Dielectric constant", "Alpha", "Beta",
+              "Pi", "Dispersion", "Polarity", "H Bonding", "Molar Vol"]
+}
+
+#print(dict_desc["one"])
+chosen_user_input = input("Choose reaction class: Grignard, Alkene metathesis, Heck C-C, Buchwald-Hartwig, SN2/SNAr, "
+                          "Amide Coupling, Suzuki-Miyaura, Alcohol Oxidation, Baylis-Hillman, Ester Hydrolysis, Other")
+print(dict_desc[chosen_user_input])
+exit()
+
 # PCA, Mean Impute, Standardisation
 
 # get data
