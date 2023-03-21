@@ -2,7 +2,7 @@ def reaction_class():
     dict_desc = {
         "Grignard": ["Dipole moment (D)", "Dielectric constant", "Alpha", "Beta",
               "Pi", "Polarity", "H Bonding"],
-        "Alkene metathesis": ["Alpha", "Beta", "H Bonding", "Dispersion"],
+        "Alkene Metathesis": ["Alpha", "Beta", "H Bonding", "Dispersion"],
         "Heck C-C": ["Dipole moment (D)", "Dielectric constant", "Alpha", "Beta",
               "Pi", "Polarity", "H Bonding"],
         "Buchwald-Hartwig": ["Dipole moment (D)", "Dielectric constant", "Alpha",
@@ -28,6 +28,6 @@ def reaction_class():
               "Refractive index", "logP", "Dipole moment (D)", "Dielectric constant", "Alpha", "Beta",
               "Pi", "Dispersion", "Polarity", "H Bonding", "Molar Vol"]
     }
-    RC = input("Choose reaction class: Grignard, Alkene metathesis, Heck C-C, Buchwald-Hartwig, SN2/SNAr, "
+    RC = input("Choose reaction class: Grignard, Alkene Metathesis, Heck C-C, Buchwald-Hartwig, SN2/SNAr, "
                "Amide Coupling, Suzuki-Miyaura, Alcohol Oxidation, Baylis-Hillman, Ester Hydrolysis, Other")
     return RC, dict_desc
