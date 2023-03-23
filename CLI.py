@@ -4,7 +4,7 @@ from PCA_utils.reactionT import reactionT
 from PCA_utils.ReactionClass import reaction_class
 
 # get reaction class
-RC, dict_desc = reaction_class()
+RC, dict_desc, dict_ref = reaction_class()
 
 # Set descriptors used in PCA to match reaction class user inputted
 Descriptors = dict_desc[RC]
@@ -16,6 +16,9 @@ add_back_data(principalDf, data)
 # get reaction temp- - figure out how to grey out instead of not include - problem as CHEM21 without data are greyed out
 T = reactionT()
 principalDf = principalDf[principalDf["BP /degC"] > T]
+
+# print references for chosen reaction class
+print(dict_ref[RC])
 
 # plot PCA graph
 get_plain_PCA(principalDf)

@@ -28,6 +28,20 @@ def reaction_class():
               "Refractive index", "logP", "Dipole moment (D)", "Dielectric constant", "Alpha", "Beta",
               "Pi", "Dispersion", "Polarity", "H Bonding", "Molar Vol"]
     }
+
+    dict_ref = {
+        "Grignard": "ref G",
+        "Alkene Metathesis": "ref A",
+        "Heck C-C": "ref H",
+        "Buchwald-Hartwig": "ref B",
+        "SN2/SNAr": "ref S",
+        "Amide Coupling": "ref AC",
+        "Suzuki-Miyaura": "ref SM",
+        "Alcohol Oxidation": "ref AO",
+        "Baylis-Hillman": "ref BH",
+        "Ester Hydrolysis": "ref EH"
+        }
+
     RC = input("Choose reaction class: Grignard, Alkene Metathesis, Heck C-C, Buchwald-Hartwig, SN2/SNAr, "
                "Amide Coupling, Suzuki-Miyaura, Alcohol Oxidation, Baylis-Hillman, Ester Hydrolysis, Other")
-    return RC, dict_desc
+    return RC, dict_desc, dict_ref
