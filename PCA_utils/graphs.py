@@ -90,15 +90,13 @@ def getPCA_plot(Data,title,colour_by):
     )
     fig.show(config=config)
 
-# CHEM21 rating as a colour - can i customise this to red, orange, green?
 # Cost as size - is this best option?
-# Label with solvent name, CHEM21 rating, cost
-# On optimised map no marker of which solvents are good for this reaction class - give option to show yield data?
+
 def optimised_PCA_plot(Data,title):
-    fig = px.scatter(Data, x='PC1', y='PC2', title=title, hover_name="Solvent", hover_data={"PC1":False,"PC2":False},
-                     color="CHEM21 (0=bad, 0.5 = acceptable, 1=good)", color_continuous_scale='RdYlGn')
+    fig = px.scatter(Data, x='PC1', y='PC2', title=title, hover_name="Solvent", hover_data={"PC1":False,"PC2":False, "cost £/L":True},
+                     color="CHEM21 (0=bad, 0.5 = acceptable, 1=good)", color_continuous_scale=[(0, "red"), (0.5, "orange"), (1, "green")])
     fig.update_traces(marker=dict(size=12,
-                                  opacity=0.6),
+                                  opacity=0.8),
                   selector=dict(mode='markers'))
     fig.update_layout(
         font=dict(
