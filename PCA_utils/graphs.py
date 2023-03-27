@@ -94,7 +94,7 @@ def getPCA_plot(Data,title,colour_by):
 
 def optimised_PCA_plot(Data,title):
     fig = px.scatter(Data, x='PC1', y='PC2', title=title, hover_name="Solvent", hover_data={"PC1":False,"PC2":False, "cost £/L":True},
-                     color="CHEM21 (0=bad, 0.5 = acceptable, 1=good)", color_continuous_scale=[(0, "red"), (0.5, "orange"), (1, "green")])
+                     color="CHEM21 (0=bad, 0.5=acceptable, 1=good)", color_continuous_scale=[(0, "red"), (0.5, "orange"), (1, "green")])
     fig.update_traces(marker=dict(size=12,
                                   opacity=0.8),
                   selector=dict(mode='markers'))

@@ -48,7 +48,7 @@ def perform_PCA(file, Descriptors, missing_data="mean", scaling="standard"):
 def add_back_data(principalDf, data):
     # add back in green rating and experimental data
     principalDf["Solvent"] = data["Solvent"]
-    principalDf["CHEM21 (0=bad, 0.5 = acceptable, 1=good)"] = data["CHEM21 (0=bad, 0.5 = acceptable, 1=good)"]
+    principalDf["CHEM21 (0=bad, 0.5=acceptable, 1=good)"] = data["CHEM21 (0=bad, 0.5=acceptable, 1=good)"]
     principalDf["% enol"] = data["% enol"]
     principalDf["Thioester"] = data["Thioester"]
     principalDf["Esterification"] = data["Esterification"]
