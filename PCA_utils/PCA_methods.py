@@ -68,3 +68,4 @@ def add_back_data(principalDf, data):
     principalDf["Ester Hydrolysis"] = data["Ester Hydrolysis"]
     principalDf["BP /degC"] = data["BP /degC"]
     principalDf["cost £/L"] = data["cost £/L"]
+    principalDf["Boc"] = data["Boc"]

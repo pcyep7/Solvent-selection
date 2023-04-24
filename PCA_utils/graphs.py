@@ -90,8 +90,6 @@ def getPCA_plot(Data,title,colour_by):
     )
     fig.show(config=config)
 
-# Cost as size - is this best option?
-
 def optimised_PCA_plot(Data,title):
     fig = px.scatter(Data, x='PC1', y='PC2', title=title, hover_name="Solvent", hover_data={"PC1":False,"PC2":False, "cost £/L":True},
                      color="CHEM21 (0=bad, 0.5=acceptable, 1=good)", color_continuous_scale=[(0, "red"), (0.5, "orange"), (1, "green")])
