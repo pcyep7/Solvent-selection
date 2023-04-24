@@ -1,5 +1,5 @@
 from PCA_utils.PCA_methods import perform_PCA, add_back_data
-from PCA_utils.graphs import get_plain_PCA, scree_graph, loadings_graph, FG_graph, getPCA_plot, optimised_PCA_plot
+from PCA_utils.graphs import scree_graph, loadings_graph, FG_graph, getPCA_plot, optimised_PCA_plot
 from PCA_utils.reactionT import reactionT
 from PCA_utils.ReactionClass import reaction_class
 
