@@ -20,9 +20,6 @@ principalDf = principalDf[principalDf["BP /degC"] > T]
 # print references for chosen reaction class
 print(dict_ref[RC])
 
-# plot PCA graph
-get_plain_PCA(principalDf)
-
 # plot scree graph
 scree_graph(cum_scree)
 
