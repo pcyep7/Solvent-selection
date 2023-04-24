@@ -13,7 +13,7 @@ Descriptors = dict_desc[RC]
 data, principalDf, cum_scree, loadings = perform_PCA("solvent_exp_data.csv", Descriptors)
 add_back_data(principalDf, data)
 
-# get reaction temp- - figure out how to grey out instead of not include - problem as CHEM21 without data are greyed out
+# get reaction temp
 T = reactionT()
 principalDf = principalDf[principalDf["BP /degC"] > T]
 
