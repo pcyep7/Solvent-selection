@@ -2,6 +2,7 @@ from PCA_utils.PCA_methods import perform_PCA, add_back_data
 from PCA_utils.graphs import scree_graph, loadings_graph, getPCA_plot, optimised_PCA_plot
 from PCA_utils.reactionT import reactionT
 from PCA_utils.ReactionClass import reaction_class
+from PCA_utils.budget import budget
 
 # get reaction class
 RC, dict_desc, dict_ref = reaction_class()
@@ -16,6 +17,10 @@ add_back_data(principalDf, data)
 # get reaction temp
 T = reactionT()
 principalDf = principalDf[principalDf["BP /degC"] > T]
+
+# get solvent budget
+C = budget()
+principalDf = principalDf[principalDf["cost £/L"] < C]
 
 # print references for chosen reaction class
 print(dict_ref[RC])
